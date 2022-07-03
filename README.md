@@ -7,8 +7,9 @@
 
 This project is meant to ease the work of teachers regarding the gradings of students, keeping the curriculum up-to-date and creating tests online.
 
-## Setup
+## Usage
 
+**1. Locally**
 Make sure to install the dependencies and run the development server on: <http://localhost:3000>
 
 ```bash
@@ -16,12 +17,16 @@ Make sure to install the dependencies and run the development server on: <http:/
 npm install && npm run dev
 ```
 
+**2. Deployed site**
+
+You can also try the project out online on my Netlify deployed site: <https://ditaridigjital.netlify.app>
+
 ## Technologies used
 
 - Nuxt 3 `RC v4`
 - Typescript
 - Firebase
-- Vuetify 3 `beta v4`
+- Vuetify 3 `beta v5`
 
 ## To-dos
 
