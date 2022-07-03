@@ -1,8 +1,7 @@
-// import type { IncomingMessage, ServerResponse } from 'http'
-import { useCookie } from 'h3'
+import { CompatibilityEvent } from "h3"
 
-export default eventHandler(async (event: any) => {
-  const userCookie = useCookie(event, 'userCookie')
+export default eventHandler(async (event: CompatibilityEvent) => {
+  const userCookie = useCookies(event.req)
 
-  event.user = userCookie
+  event.context.auth = userCookie
 })

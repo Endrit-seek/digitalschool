@@ -5,18 +5,27 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
 } from 'firebase/auth'
 
 export const createUser = async (email: string, password: string) => {
   const auth = getAuth()
+  const router = useRouter()
+
   const credentials = await createUserWithEmailAndPassword(
     auth,
     email,
     password
-  ).catch(error => {
-    const errorCode = error.code
-    const errorMessage = error.message
-  })
+  )
+    .then(userCredential => {
+      // Signed in
+      const user = userCredential.user
+      router.push('/')
+    })
+    .catch(error => {
+      const errorCode = error.code
+      const errorMessage = error.message
+    })
   return credentials
 }
 
@@ -38,7 +47,7 @@ export const initUser = async () => {
   const firebaseUser = useFirebaseUser()
   firebaseUser.value = auth.currentUser
 
-  const userCookie = useCookie('userCookie')
+  const userCookie = useCookie('userCookie', { sameSite: 'strict' })
 
   const router = useRouter()
 
@@ -46,6 +55,7 @@ export const initUser = async () => {
     if (user) {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
+      router.push('/')
     } else {
       //if signed out
       router.push('/login')
@@ -53,8 +63,7 @@ export const initUser = async () => {
 
     firebaseUser.value = user
 
-    // @ts-ignore
-    userCookie.value = user //ignore error because nuxt will serialize to json
+    userCookie.value = user as unknown as string
 
     $fetch('/api/auth', {
       method: 'POST',
@@ -65,6 +74,13 @@ export const initUser = async () => {
 
 export const signOutUser = async () => {
   const auth = getAuth()
-  const result = await auth.signOut()
-  return result
+  const router = useRouter()
+
+  signOut(auth)
+    .then(() => {
+      router.push('/login')
+    })
+    .catch(error => {
+      // An error happened.
+    })
 }

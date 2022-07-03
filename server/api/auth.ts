@@ -1,11 +1,9 @@
-import { useBody } from 'h3'
+import { CompatibilityEvent, useBody } from 'h3'
 
-export default eventHandler(async (event: any) => {
-  // if(event !== 'POST') return 'Must be post request'
-  console.log(event)
-  const { user } = await useBody(event) // only for POST request
+export default eventHandler(async (event: CompatibilityEvent) => {
+  const { user } = await useBody(event)
 
-  event.user = user
+  event.context.auth = { user }
 
   return { updated: true }
 })
