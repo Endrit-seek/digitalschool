@@ -28,14 +28,14 @@ npm install && npm run dev
 - [ ] Make the website responsive with Phones, Tablets and Laptops size.
 - [ ] Add other keys to User collections in Firebase like Name & Surname.
 - [ ] Make the visible eye to the password field functional.
-- [ ] Create validation on Login form and Register form.
+- [ ] Create validation on Login form and Register form.  
 ...
 
 *This list will keep updating throughout the course of the project.*
 
 ## Known Bugs
 
-- [ ] If user is logged out and tries to access home page route a flash of the content will appear.
+- [ ] If user is logged out and tries to access home page route a flash of the content will appear.  
 ...
 
 *This list will keep updating throughout the course of the project.*
