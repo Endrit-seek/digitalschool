@@ -1,42 +1,40 @@
-# Nuxt 3 Minimal Starter
+# [Digital_School](https://user-images.githubusercontent.com/59187988/177054390-9507259c-c55f-4234-b709-bd71a4ad0494.png)
+![GitHub last commit](https://img.shields.io/github/last-commit/Endrit-seek/digitalschool)
+***Documentation is still in process, this is mainly an overview.***
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+## Description
+
+This project is meant to ease the work of teachers regarding the gradings of students, keeping the curriculum up-to-date and creating tests online.
 
 ## Setup
 
-Make sure to install the dependencies:
+Make sure to install the dependencies and run the development server on: <http://localhost:3000>
 
 ```bash
-# yarn
-yarn install
-
 # npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
+npm install && npm run dev
 ```
 
-## Development Server
+## Technologies used
 
-Start the development server on http://localhost:3000
+- Nuxt 3 `RC v4`
+- Typescript
+- Firebase
+- Vuetify 3 `beta v4`
 
-```bash
-npm run dev
-```
+## To-dos
 
-## Production
+- [ ] Make the website responsive with Phones, Tablets and Laptops size.
+- [ ] Add other keys to User collections in Firebase like Name & Surname.
+- [ ] Make the visible eye to the password field functional.
+- [ ] Create validation on Login form and Register form.
+...
 
-Build the application for production:
+*This list will keep updating throughout the course of the project.*
 
-```bash
-npm run build
-```
+## Known Bugs
 
-Locally preview production build:
+- [ ] If user is logged out and tries to access home page route a flash of the content will appear.
+...
 
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+*This list will keep updating throughout the course of the project.*
