@@ -1,5 +1,6 @@
-# [Digital_School](https://user-images.githubusercontent.com/59187988/177054390-9507259c-c55f-4234-b709-bd71a4ad0494.png)
+# ![Digital_School](https://user-images.githubusercontent.com/59187988/177055866-4921317f-ce0f-4863-9e5f-c347dcd848dc.png)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Endrit-seek/digitalschool)
+
 ***Documentation is still in process, this is mainly an overview.***
 
 ## Description
