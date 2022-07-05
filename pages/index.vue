@@ -1,15 +1,24 @@
 <template>
-  <v-app class="d-flex justify-center">
+  <v-app>
     <v-main class="d-flex justify-center align-center">
       <ClientOnly>
-        <v-card v-if="firebaseUser">
-          <v-text-field>Welcome</v-text-field>
-          <v-text-field>Your email is: {{ firebaseUser.email }}</v-text-field>
-          <v-btn @click.prevent="signOut"> Sign Out </v-btn>
-        </v-card>
-        <v-card v-else>
-          Not logged in
-        </v-card>
+        <v-row align="center" justify="center">
+          <v-col
+            cols="12"
+            lg="6"
+            md="6"
+            class="grey lighten-2 fill-height d-flex flex-column justify-center align-center"
+          >
+            <v-card class="text-center" v-if="firebaseUser">
+              <v-card-title class="justify-center">Welcome</v-card-title>
+              <v-card-text>Your email is: {{ firebaseUser.email }}</v-card-text>
+              <v-card-actions>
+                <v-btn @click.prevent="signOut"> Sign Out </v-btn>
+              </v-card-actions>
+            </v-card>
+            <v-card class="text-center" v-else> Not logged in </v-card>
+          </v-col>
+        </v-row>
       </ClientOnly>
     </v-main>
   </v-app>
