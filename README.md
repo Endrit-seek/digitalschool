@@ -9,7 +9,7 @@ This project is meant to ease the work of teachers regarding the gradings of stu
 
 ## Usage
 
-**1. Locally**
+**1. Locally**  
 Make sure to install the dependencies and run the development server on: <http://localhost:3000>
 
 ```bash
@@ -32,8 +32,8 @@ You can also try the project out online on my Netlify deployed site: <https://di
 
 - [ ] Make the website responsive with Phones, Tablets and Laptops size.
 - [ ] Add other keys to User collections in Firebase like Name & Surname.
-- [ ] Make the visible eye to the password field functional.
-- [ ] Create validation on Login form and Register form.  
+- [x] Make the visible eye to the password field functional.
+- [x] Create validation on Login form and Register form.  
 ...
 
 *This list will keep updating throughout the course of the project.*
